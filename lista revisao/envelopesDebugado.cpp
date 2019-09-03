@@ -8,10 +8,10 @@ int main(){
     int qtdTiposDeBala; /// 1 <= qtdTiposDeBala <= 20;
     int qtdEnvelopes = 0;
 
-    //cout << "Quantos rotulos voce tem? ";
+    cout << "Quantos rotulos voce tem? ";
     cin >> qtdRotulosBalas;
 
-    //cout << "Quantos tipos de bala tem a empresa? ";
+    cout << "Quantos tipos de bala tem a empresa? ";
     cin >> qtdTiposDeBala;
 
     //int *rotulos = new int[qtdRotulosBalas];
@@ -20,24 +20,24 @@ int main(){
     for(int i = 0; i < qtdRotulosBalas; i++){
         cin >> rotulos[i];
     }
-    /*
+
     cout << "Voce tem esses rotulos: ";
     for(int i = 0; i < qtdRotulosBalas; i++){
         cout << rotulos[i] << " ";
     }
-    */
+
     /** LÓGICA **/
 
     int menorQtd = 10000;
     for(int i = 1; i <= qtdTiposDeBala; i++){
-        //cout << "\nTIPO [" << i << "]\n";
+        cout << "\nTIPO [" << i << "]\n";
         int contador = 0;
         for(int j = 0; j < qtdRotulosBalas; j++){
             if(rotulos[j] == i){
                 contador++;
             }
         }
-        //cout << "\n Existe " << contador << " do tipo " << i << endl;
+        cout << "\n Existe " << contador << " do tipo " << i << endl;
         if(contador < menorQtd){
             menorQtd = contador;
         }
@@ -45,7 +45,7 @@ int main(){
 
     qtdEnvelopes = menorQtd;
 
-    //cout << "\nQtd envelopes: " << qtdEnvelopes << endl;
-    cout << qtdEnvelopes << endl;
+    cout << "\nQtd envelopes: " << qtdEnvelopes << endl;
+
     return 0;
 }
